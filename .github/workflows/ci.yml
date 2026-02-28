@@ -24,11 +24,11 @@ jobs:
         run: |
           curl -X POST -H 'Content-type: application/json' \
           --data '{"text":"CI Pipeline Succeeded for DevOps WebApp!"}' \
-          ${{ secrets.SLACK_WEBHOOK_URL }}
+          ${{ secrets.DEVOPS123 }}
 
       - name: Send Slack Notification (Failure)
         if: failure()
         run: |
           curl -X POST -H 'Content-type: application/json' \
           --data '{"text":" CI Pipeline Failed for DevOps WebApp!"}' \
-          ${{ secrets.SLACK_WEBHOOK_URL }}
+          ${{ secrets.DEVOPS123 }}
